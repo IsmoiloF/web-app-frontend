@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link href="output.css" rel="stylesheet">
+    <title>Document</title>
+      <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+  
+  <style>
+    .fixed-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+
+<script>
+  function setThemeClass() {
+    document.documentElement.className = Telegram.WebApp.colorScheme;
+  }
+  Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+  setThemeClass();
+</script>
+</head>
+<body>
+
+    <div class="fixed bg-gray-100 karzinka p-3 justify-between flex  items-center w-[420px]">
+         <div class="font-bold text-2xl">
+            FastFood
+         </div>
+        <div class="flex relative">
+            <p class="summ px-3 font-bold text-2xl flex items-center"></p><img class="w-[40px] z-0 mr-[-8px] " src="./images//karzinka.png" alt="">
+            <p class="count bg-red-600   z-10 flex justify-center w-[20px] h-[20px] items-center rounded rounded-[20px] text-white absalute mr-[30px]"></p>
+        </div>
+    </div>
+
+    <div class="container pt-[60px] gap grid grid-cols-2 w-[410px]">
+       
+    </div>
+
+          <button onclick="SendData()"  class="checkout  hidden fixed-bottom w-[410px] bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            Send Order
+          </button> 
+
+    
+</body>
+<script src="./app.js"></script>
+</html>
